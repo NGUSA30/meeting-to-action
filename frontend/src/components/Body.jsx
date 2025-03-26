@@ -43,7 +43,11 @@ const Body = () => {
     ]);
     setActiveConversation(conversations.length);
   };
-
+  const [currentUser] = useState({
+    name: "Samwel Ngusa",
+    email: "ngusa@proton.me",
+    avatar: ""
+  });
   return (
     <div className="flex h-screen bg-secondary">
       <SideBar
@@ -63,6 +67,7 @@ const Body = () => {
         handleSendMessage={handleSendMessage}
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
+        currentUser={currentUser}
       />
     </div>
   );
