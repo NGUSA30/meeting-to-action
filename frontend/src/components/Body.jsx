@@ -28,7 +28,7 @@ const Body = () => {
       const updatedWithBot = [...conversations];
       updatedWithBot[activeConversation].messages.push({
         id: Date.now(),
-        text: 'Thanks for your message! I\'m a simple chatbot.',
+        text: 'Thanks for your message! I\'m a simple Agent.',
         sender: 'bot'
       });
       setConversations(updatedWithBot);
@@ -45,7 +45,7 @@ const Body = () => {
   };
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen bg-secondary">
       <SideBar
         conversations={conversations}
         activeConversation={activeConversation}
